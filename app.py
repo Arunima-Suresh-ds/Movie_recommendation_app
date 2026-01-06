@@ -14,7 +14,7 @@ submit=st.button('Enter')
 model=genai.GenerativeModel('gemini-2.5-flash-lite')
 if submit and user_input.strip():
     st.markdown(f'Movie name entered:{user_input}')
-    response=model.generate_content(f"Generate Nickname recommendations related to :{user_input} ")
+    response=model.generate_content(f"Generate Movie recommendations related to :{user_input} ")
     st.write(f"Recommendation of Movie :\n {response.text}")
 else:
     st.write("Enter a movie name")
